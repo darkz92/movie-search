@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%;  background: rgba(0, 0, 0, 0.01);}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+$primary: #2196f3;
+$primary-light: #6ec6ff;
+$primary-dark: #0069c0;
+
+$danger: red;
+
+.primary-color{
+  color: $primary;
+
+  &-light{
+    color: $primary-light;
+  }
+
+  &-dark{
+    color: $primary-dark;
+  }
+
+  &-op-h{
+    opacity: 0.8;
+  }
+
+  &-op-m{
+    opacity: 0.5;
+  }
+
+  &-op-l{
+    opacity: 0.3;
+  }
+}
+
+.danger-color{
+  color: $danger;
+
+  &-op-h{
+    opacity: 0.8;
+  }
+
+  &-op-m{
+    opacity: 0.5;
+  }
+
+  &-op-l{
+    opacity: 0.3;
+  }
+}
+
+.primary-bg-color{
+  background: $primary;
+
+  &-light{
+    background: $primary-light;
+  }
+
+  &-dark{
+    background: $primary-dark;
+  }
+
+  &-op-h{
+    background: rgba($primary, 0.5);
+  }
+
+  &-op-m{
+    background: rgba($primary, 0.3)
+  }
+
+  &-op-l{
+    background: rgba($primary, 0.05);
+  }
+}
+
+.danger-bg-color{
+  background: $danger;
+
+  &-op-h{
+    background: rgba($danger, 0.5);
+  }
+
+  &-op-m{
+    background: rgba($danger, 0.3)
+  }
+
+  &-op-l{
+    background: rgba($danger, 0.05);
+  }
+}
+
+
+
