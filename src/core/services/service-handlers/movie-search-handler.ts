@@ -12,6 +12,11 @@ export class MovieSearchHandler {
               private dataStore: DataStore) {
   }
 
+  /**
+   * Get request of search result
+   * @param title
+   * @param page
+   */
   public getSearchResultByTitle(title: string, page: string): Observable<any> {
     const movieSearchService = environment.backend.movieSearchService;
     let params: HttpParams = new HttpParams();
@@ -22,6 +27,10 @@ export class MovieSearchHandler {
     return this.dataStore.get(DataKey.searchResults, true);
   }
 
+  /**
+   * Get request of detail search result
+   * @param id
+   */
   public getDetailResult(id: string): Observable<any> {
     const movieSearchService = environment.backend.movieSearchService;
     let params: HttpParams = new HttpParams();

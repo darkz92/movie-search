@@ -13,6 +13,13 @@ export class DataLoader {
   ) {
   }
 
+  /**
+   * Get and Load response
+   * @param dataKey
+   * @param url
+   * @param params
+   * @param pathVariables
+   */
   public getAndLoadResponse<T>(
     dataKey: DataKey, url: string, params?: HttpParams, pathVariables?: any[]) {
     // clear errors
