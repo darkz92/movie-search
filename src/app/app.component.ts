@@ -9,5 +9,5 @@ import { SpinnerService } from '../core/util/spinner-service';
 export class AppComponent {
   title = 'movie-search';
 
-  constructor(private spinnerService: SpinnerService) {}
+  constructor(public spinnerService: SpinnerService) {}
 }
