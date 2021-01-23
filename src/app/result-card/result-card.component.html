@@ -1,0 +1,19 @@
+
+<div *ngIf="result" class="result-card">
+  <div class="result-card-container">
+    <img mat-card-image class="result-card-image"
+         src="{{result?.Poster}}">
+    <div class="result-card-description">
+      <div class="result-card-name label--medium">{{result?.Title}}</div>
+      <hr class="footer-line">
+      <div class="result-card-footer">
+        <div class="result-card-footer-text label--medium">{{result?.Year}}</div>
+        <div class="result-card-footer-btn">
+          <button mat-raised-button color="primary" class="label--medium"
+                  (click)="onDetailSearch($event)">{{btnText}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

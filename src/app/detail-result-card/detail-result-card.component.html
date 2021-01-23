@@ -1,0 +1,29 @@
+<div class="detail-result-card">
+  <div class="result-card-container">
+    <img mat-card-image class="result-card-image"
+         src="{{detailResult.Poster}}">
+    <div class="result-card-description">
+      <div class="result-card-description--content">
+        <div class="result-card-name label--medium">{{detailResult?.Title}}</div>
+        <div class="result-card-plot-lbl label--small">Plot</div>
+        <div class="result-card-plot label--medium">{{detailResult?.Plot}}
+        </div>
+        <div class="result-card-actors-lbl label--small">Actors</div>
+        <div class="result-card-plot label--medium">{{detailResult?.Actors}}
+        </div>
+        <div class="result-card-ratings-lbl label--small">Ratings</div>
+        <ng-container *ngIf="detailResult?.Ratings && detailResult?.Ratings.length > 0">
+          <ng-container *ngFor="let rating of detailResult?.Ratings">
+            <div class="result-card-plot label--medium">{{'- ' + rating?.Source + ' : ' + rating?.Value}}</div>
+          </ng-container>
+        </ng-container>
+      </div>
+      <hr class="footer-line">
+      <div class="result-card-footer">
+        <div class="result-card-footer-text label--medium">{{detailResult?.Year}}</div>
+        <div class="result-card-footer-btn">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
